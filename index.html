@@ -1,67 +1,98 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NHCO Client Outcomes Analysis</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 {
-            color: #3498db;
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 50px;
             text-align: center;
         }
-        .link-container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .link-item {
-            margin: 20px 0;
-            padding: 15px;
-            background: #ecf0f1;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .link-item:hover {
-            background: #d5dbdb;
-        }
-        a {
+        
+        h1 {
             color: #2c3e50;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 32px;
+            font-weight: 700;
         }
-        .description {
+        
+        .subtitle {
             color: #7f8c8d;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        a {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 20px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        a:first-of-type {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        a:first-of-type:hover {
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #95a5a6;
             font-size: 14px;
-            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>NHCO Client Outcomes Analysis</h1>
-    <div class="link-container">
-        <div class="link-item">
-            <a href="nhco_summary_table.html">📊 Complete Summary Metrics</a>
-            <div class="description">Interactive table with all demographics, conditions, and services - searchable and sortable</div>
+    <div class="container">
+        <h1>NHCO Client Outcomes Analysis</h1>
+        <p class="subtitle">Interactive Data Visualization Dashboard</p>
+        
+        <div class="links">
+            <a href="nhco_client_map.html">🗺️ Geographic Distribution Map</a>
+            <a href="nhco_summary_table.html">📊 Summary Metrics Table</a>
         </div>
         
-        <div class="link-item">
-            <a href="service_comparison.html">🏥 Service Effectiveness Analysis</a>
-            <div class="description">Detailed comparison of improvement rates across all 9 NHCO services</div>
-        </div>
-        
-        <div class="link-item">
-            <a href="demographics_breakdown.html">👥 Demographics Breakdown</a>
-            <div class="description">Analysis by gender, race, age group, and geographic location</div>
-        </div>
+        <p class="footer">NHCO Client Outcomes Research<br>Penn State University</p>
     </div>
 </body>
 </html>
-
